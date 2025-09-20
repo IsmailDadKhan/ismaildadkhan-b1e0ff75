@@ -7,12 +7,12 @@ const Skills = () => {
       icon: Code,
       color: "primary",
       skills: [
-        { name: "Python", level: 90 },
-        { name: "Pandas & NumPy", level: 85 },
-        { name: "Matplotlib & Seaborn", level: 85 },
-        { name: "SQL", level: 80 },
-        { name: "Power BI", level: 88 },
-        { name: "Excel", level: 92 },
+        "Python",
+        "Pandas & NumPy", 
+        "Matplotlib & Seaborn",
+        "SQL", 
+        "Power BI",
+        "Excel"
       ]
     },
     {
@@ -20,12 +20,12 @@ const Skills = () => {
       icon: TrendingUp,
       color: "success",
       skills: [
-        { name: "Social Media Management", level: 95 },
-        { name: "Campaign Optimization", level: 85 },
-        { name: "SEO", level: 80 },
-        { name: "Copywriting", level: 90 },
-        { name: "SRS Documentation", level: 88 },
-        { name: "Content Strategy", level: 85 },
+        "Social Media Management",
+        "Campaign Optimization",
+        "SEO", 
+        "Copywriting",
+        "SRS Documentation",
+        "Content Strategy"
       ]
     },
     {
@@ -33,12 +33,12 @@ const Skills = () => {
       icon: ShoppingCart,
       color: "accent",
       skills: [
-        { name: "Product Listings", level: 92 },
-        { name: "Inventory Management", level: 88 },
-        { name: "Order Management", level: 90 },
-        { name: "Marketplace Optimization", level: 85 },
-        { name: "Sales Analysis", level: 87 },
-        { name: "Customer Support", level: 90 },
+        "Product Listings",
+        "Inventory Management",
+        "Order Management",
+        "Marketplace Optimization",
+        "Sales Analysis", 
+        "Customer Support"
       ]
     },
     {
@@ -46,12 +46,12 @@ const Skills = () => {
       icon: Users,
       color: "primary",
       skills: [
-        { name: "Analytical Thinking", level: 95 },
-        { name: "Communication", level: 92 },
-        { name: "Creativity", level: 88 },
-        { name: "Team Collaboration", level: 90 },
-        { name: "Problem Solving", level: 93 },
-        { name: "Project Management", level: 85 },
+        "Analytical Thinking",
+        "Communication",
+        "Creativity",
+        "Team Collaboration", 
+        "Problem Solving",
+        "Project Management"
       ]
     }
   ];
@@ -62,29 +62,29 @@ const Skills = () => {
         return {
           bg: 'bg-primary/10',
           text: 'text-primary',
-          progressBg: 'bg-primary/20',
-          progressFill: 'bg-primary'
+          border: 'border-primary/20',
+          badge: 'bg-primary/10 text-primary border-primary/20'
         };
       case 'success':
         return {
           bg: 'bg-success/10',
           text: 'text-success',
-          progressBg: 'bg-success/20',
-          progressFill: 'bg-success'
+          border: 'border-success/20',
+          badge: 'bg-success/10 text-success border-success/20'
         };
       case 'accent':
         return {
           bg: 'bg-accent/10',
           text: 'text-accent',
-          progressBg: 'bg-accent/20',
-          progressFill: 'bg-accent'
+          border: 'border-accent/20',
+          badge: 'bg-accent/10 text-accent border-accent/20'
         };
       default:
         return {
           bg: 'bg-primary/10',
           text: 'text-primary',
-          progressBg: 'bg-primary/20',
-          progressFill: 'bg-primary'
+          border: 'border-primary/20',
+          badge: 'bg-primary/10 text-primary border-primary/20'
         };
     }
   };
@@ -121,21 +121,15 @@ const Skills = () => {
                     </h3>
                   </div>
 
-                  {/* Skills List */}
-                  <div className="space-y-4">
+                  {/* Skills Grid */}
+                  <div className="flex flex-wrap gap-3">
                     {category.skills.map((skill, skillIndex) => (
-                      <div key={skillIndex} className="space-y-2">
-                        <div className="flex justify-between items-center">
-                          <span className="text-foreground font-medium">{skill.name}</span>
-                          <span className="text-sm text-muted-foreground">{skill.level}%</span>
-                        </div>
-                        <div className={`w-full h-2 ${colors.progressBg} rounded-full overflow-hidden`}>
-                          <div 
-                            className={`h-full ${colors.progressFill} rounded-full transition-all duration-1000 ease-out`}
-                            style={{ width: `${skill.level}%` }}
-                          ></div>
-                        </div>
-                      </div>
+                      <span 
+                        key={skillIndex}
+                        className={`px-4 py-2 rounded-full text-sm font-medium border transition-all hover:scale-105 ${colors.badge}`}
+                      >
+                        {skill}
+                      </span>
                     ))}
                   </div>
                 </div>
