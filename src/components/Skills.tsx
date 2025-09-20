@@ -5,7 +5,6 @@ const Skills = () => {
     {
       title: "Data Analysis & Tech",
       icon: Code,
-      color: "primary",
       skills: [
         "Python",
         "Pandas & NumPy", 
@@ -18,7 +17,6 @@ const Skills = () => {
     {
       title: "Marketing & Content",
       icon: TrendingUp,
-      color: "success",
       skills: [
         "Social Media Management",
         "Campaign Optimization",
@@ -31,7 +29,6 @@ const Skills = () => {
     {
       title: "E-commerce",
       icon: ShoppingCart,
-      color: "accent",
       skills: [
         "Product Listings",
         "Inventory Management",
@@ -44,7 +41,6 @@ const Skills = () => {
     {
       title: "Soft Skills",
       icon: Users,
-      color: "primary",
       skills: [
         "Analytical Thinking",
         "Communication",
@@ -55,39 +51,6 @@ const Skills = () => {
       ]
     }
   ];
-
-  const getColorClasses = (color: string) => {
-    switch (color) {
-      case 'primary':
-        return {
-          bg: 'bg-primary/10',
-          text: 'text-primary',
-          border: 'border-primary/20',
-          badge: 'bg-primary/10 text-primary border-primary/20'
-        };
-      case 'success':
-        return {
-          bg: 'bg-success/10',
-          text: 'text-success',
-          border: 'border-success/20',
-          badge: 'bg-success/10 text-success border-success/20'
-        };
-      case 'accent':
-        return {
-          bg: 'bg-accent/10',
-          text: 'text-accent',
-          border: 'border-accent/20',
-          badge: 'bg-accent/10 text-accent border-accent/20'
-        };
-      default:
-        return {
-          bg: 'bg-primary/10',
-          text: 'text-primary',
-          border: 'border-primary/20',
-          badge: 'bg-primary/10 text-primary border-primary/20'
-        };
-    }
-  };
 
   return (
     <section id="skills" className="py-20 bg-secondary/30">
@@ -106,27 +69,26 @@ const Skills = () => {
           {/* Skills Grid */}
           <div className="grid md:grid-cols-2 gap-8">
             {skillCategories.map((category, index) => {
-              const colors = getColorClasses(category.color);
               const Icon = category.icon;
               
               return (
                 <div key={index} className="bg-card p-8 rounded-2xl border border-border shadow-sm hover:shadow-md transition-shadow">
                   {/* Category Header */}
                   <div className="flex items-center space-x-4 mb-6">
-                    <div className={`${colors.bg} p-3 rounded-lg`}>
-                      <Icon className={`w-6 h-6 ${colors.text}`} />
+                    <div className="bg-primary/10 p-3 rounded-lg">
+                      <Icon className="w-6 h-6 text-primary" />
                     </div>
                     <h3 className="font-display font-semibold text-xl text-foreground">
                       {category.title}
                     </h3>
                   </div>
 
-                  {/* Skills Grid */}
+                  {/* Skills List */}
                   <div className="flex flex-wrap gap-3">
                     {category.skills.map((skill, skillIndex) => (
                       <span 
                         key={skillIndex}
-                        className={`px-4 py-2 rounded-full text-sm font-medium border transition-all hover:scale-105 ${colors.badge}`}
+                        className="px-4 py-2 rounded-full text-sm font-medium bg-secondary/50 text-foreground border border-border hover:bg-secondary transition-all hover:scale-105"
                       >
                         {skill}
                       </span>
