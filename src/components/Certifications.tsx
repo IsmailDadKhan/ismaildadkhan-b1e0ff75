@@ -11,37 +11,41 @@ const Certifications = () => {
       description: "Comprehensive course covering Python programming fundamentals, data structures, and applications in data science and AI development.",
       skills: ["Python Programming", "Data Analysis", "NumPy", "Pandas", "API Integration"],
       verified: true,
-      color: "primary"
+      color: "primary",
+      url: "https://www.credly.com/badges/ec3fc6cc-705a-4b4c-81ad-930ca421c3c1/public_url"
     },
     {
-      title: "Foundations of Project Management",
-      provider: "Google",
+      title: "Microsoft Excel VBA and Macros",
+      provider: "Coursera Instructor Network",
       platform: "Coursera",
       date: "2024",
-      description: "Professional certificate covering project management fundamentals, methodologies, and best practices for successful project delivery.",
-      skills: ["Project Planning", "Risk Management", "Team Leadership", "Agile Methodology"],
+      description: "Advanced Excel programming course covering VBA scripting, macro development, and automation of complex spreadsheet tasks.",
+      skills: ["VBA Programming", "Excel Automation", "Macro Development", "Data Processing", "Workflow Optimization"],
       verified: true,
-      color: "success"
+      color: "success",
+      url: "https://coursera.org/share/4d9fe1b8cada1a944a2399b262ff3b5f"
     },
     {
       title: "Power BI for Beginners: Build Your First Report",
       provider: "Microsoft Learning",
-      platform: "Microsoft Learn",
+      platform: "Coursera",
       date: "2023",
       description: "Hands-on training in Power BI fundamentals, data visualization, and creating interactive business intelligence reports.",
       skills: ["Power BI", "Data Visualization", "DAX", "Business Intelligence", "Report Building"],
       verified: true,
-      color: "accent"
+      color: "accent",
+      url: "https://coursera.org/share/916082d70f6a37e4800c6b24df33becc"
     },
     {
       title: "Data Analysis with OpenAI API: Save Time with GenAI",
       provider: "AI Learning Institute",
-      platform: "Online Course",
+      platform: "Coursera",
       date: "2024",
       description: "Advanced course on leveraging AI and GPT models for automated data analysis, insights generation, and workflow optimization.",
       skills: ["OpenAI API", "GPT Integration", "Automated Analysis", "AI Workflows", "Data Processing"],
       verified: true,
-      color: "primary"
+      color: "primary",
+      url: "https://coursera.org/share/18b24aa4dc7885d02073f5f12d9e3a94"
     }
   ];
 
@@ -160,9 +164,12 @@ const Certifications = () => {
                           variant="ghost" 
                           size="sm"
                           className={`${colors.text} group/btn`}
+                          asChild
                         >
-                          View Certificate
-                          <ExternalLink className="ml-2 w-3 h-3 group-hover/btn:translate-x-0.5 transition-transform" />
+                          <a href={cert.url} target="_blank" rel="noopener noreferrer">
+                            View Certificate
+                            <ExternalLink className="ml-2 w-3 h-3 group-hover/btn:translate-x-0.5 transition-transform" />
+                          </a>
                         </Button>
                       </div>
                     </div>

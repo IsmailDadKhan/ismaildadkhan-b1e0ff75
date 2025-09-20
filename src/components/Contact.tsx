@@ -67,13 +67,13 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "inkedin.com/in/ismaildadkhan/",
+      href: "https://www.linkedin.com/in/ismaildadkhan/",
       color: "primary"
     },
     {
       icon: Github,
       label: "GitHub",
-      href: "github.com/IsmailDadKhan",
+      href: "https://github.com/IsmailDadKhan",
       color: "success"
     }
   ];
