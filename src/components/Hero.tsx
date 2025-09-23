@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Play } from "lucide-react";
-import profileImage from "@/assets/ismail-profile.jpg";
+import profileImage from "@/assets/ismail-profile-new.jpg";
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -84,13 +84,8 @@ const Hero = () => {
                 />
               </div>
 
-              {/* Floating Badges */}
-              <div className="absolute -top-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-full font-semibold text-sm shadow-lg animate-float">
-                UI/UX Designer
-              </div>
-              
-              <div className="absolute -bottom-4 -left-4 bg-success text-success-foreground px-4 py-2 rounded-full font-semibold text-sm shadow-lg" 
-                   style={{ animationDelay: '1s' }}>
+              {/* Floating Badge */}
+              <div className="absolute -bottom-4 -left-4 bg-success text-success-foreground px-4 py-2 rounded-full font-semibold text-sm shadow-lg animate-float">
                 Data Scientist
               </div>
             </div>
