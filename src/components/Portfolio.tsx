@@ -107,17 +107,17 @@ const Portfolio = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="font-display font-bold text-3xl lg:text-4xl text-foreground mb-4">
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-foreground mb-4">
               Portfolio & Projects
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
               Showcasing my work in data analysis, digital marketing, and e-commerce solutions
             </p>
           </div>
 
           {/* Projects Grid */}
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             {projects.map((project, index) => {
               const colors = getColorClasses(project.color);
               const Icon = project.icon;
@@ -142,23 +142,23 @@ const Portfolio = () => {
                   </div>
 
                   {/* Project Content */}
-                  <div className="p-6">
-                    <div className="mb-4">
+                  <div className="p-4 lg:p-6">
+                    <div className="mb-3 lg:mb-4">
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-sm text-muted-foreground font-medium">{project.category}</span>
+                        <span className="text-xs lg:text-sm text-muted-foreground font-medium">{project.category}</span>
                       </div>
-                      <h3 className="font-display font-semibold text-xl text-foreground mb-3">
+                      <h3 className="font-display font-semibold text-lg lg:text-xl text-foreground mb-2 lg:mb-3">
                         {project.title}
                       </h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed">
+                      <p className="text-muted-foreground text-xs lg:text-sm leading-relaxed">
                         {project.description}
                       </p>
                     </div>
 
                     {/* Technologies */}
-                    <div className="mb-4">
-                      <h4 className="text-sm font-medium text-foreground mb-2">Technologies Used:</h4>
-                      <div className="flex flex-wrap gap-2">
+                    <div className="mb-3 lg:mb-4">
+                      <h4 className="text-xs lg:text-sm font-medium text-foreground mb-2">Technologies Used:</h4>
+                      <div className="flex flex-wrap gap-1 lg:gap-2">
                         {project.technologies.map((tech, techIndex) => (
                           <span 
                             key={techIndex}
@@ -171,8 +171,8 @@ const Portfolio = () => {
                     </div>
 
                     {/* Key Features */}
-                    <div className="mb-6">
-                      <h4 className="text-sm font-medium text-foreground mb-2">Key Features:</h4>
+                    <div className="mb-4 lg:mb-6">
+                      <h4 className="text-xs lg:text-sm font-medium text-foreground mb-2">Key Features:</h4>
                       <div className="space-y-1">
                         {project.features.slice(0, 3).map((feature, featureIndex) => (
                           <div key={featureIndex} className="flex items-center space-x-2 text-xs text-muted-foreground">
@@ -184,7 +184,7 @@ const Portfolio = () => {
                     </div>
 
                     {/* Action Buttons */}
-                    <div className="flex space-x-3">
+                    <div className="flex space-x-2 lg:space-x-3">
                       <Button 
                         variant="outline" 
                         size="sm" 
@@ -208,8 +208,8 @@ const Portfolio = () => {
           </div>
 
           {/* More Projects CTA */}
-          <div className="text-center mt-12">
-            <p className="text-muted-foreground mb-6">
+          <div className="text-center mt-8 lg:mt-12">
+            <p className="text-muted-foreground mb-4 lg:mb-6 text-sm lg:text-base">
               Interested in seeing more of my work or discussing a project?
             </p>
             <Button 

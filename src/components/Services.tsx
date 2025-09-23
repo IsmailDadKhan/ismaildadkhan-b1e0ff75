@@ -106,17 +106,17 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="font-display font-bold text-3xl lg:text-4xl text-foreground mb-4">
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-foreground mb-4">
               Services I Offer
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
               Comprehensive solutions to help your business grow through data insights and digital excellence
             </p>
           </div>
 
           {/* Services Grid */}
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-12">
             {services.map((service, index) => {
               const colors = getColorClasses(service.color);
               const Icon = service.icon;
@@ -124,25 +124,25 @@ const Services = () => {
               return (
                 <div 
                   key={index} 
-                  className={`bg-card p-8 rounded-2xl border-2 ${colors.border} ${colors.hover} transition-all duration-300 hover:shadow-lg group`}
+                  className={`bg-card p-6 lg:p-8 rounded-2xl border-2 ${colors.border} ${colors.hover} transition-all duration-300 hover:shadow-lg group`}
                 >
                   {/* Service Header */}
-                  <div className="flex items-start space-x-4 mb-6">
-                    <div className={`${colors.bg} p-4 rounded-xl group-hover:scale-110 transition-transform duration-300`}>
-                      <Icon className={`w-8 h-8 ${colors.text}`} />
+                  <div className="flex items-start space-x-4 mb-4 lg:mb-6">
+                    <div className={`${colors.bg} p-3 lg:p-4 rounded-xl group-hover:scale-110 transition-transform duration-300`}>
+                      <Icon className={`w-6 h-6 lg:w-8 lg:h-8 ${colors.text}`} />
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-display font-semibold text-xl text-foreground mb-2">
+                      <h3 className="font-display font-semibold text-lg lg:text-xl text-foreground mb-2">
                         {service.title}
                       </h3>
-                      <p className="text-muted-foreground leading-relaxed">
+                      <p className="text-muted-foreground leading-relaxed text-sm lg:text-base">
                         {service.description}
                       </p>
                     </div>
                   </div>
 
                   {/* Service Features */}
-                  <div className="space-y-3 mb-6">
+                  <div className="space-y-2 lg:space-y-3 mb-4 lg:mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center space-x-3">
                         <div className={`w-1.5 h-1.5 ${colors.text.replace('text-', 'bg-')} rounded-full`}></div>

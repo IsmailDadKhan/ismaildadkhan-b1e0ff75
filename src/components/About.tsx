@@ -6,23 +6,23 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="font-display font-bold text-3xl lg:text-4xl text-foreground mb-4">
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-foreground mb-4">
               About Me
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg sm:text-xl text-muted-foreground">
               Get to know me better
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Bio */}
-            <div className="space-y-6">
-              <h3 className="font-display font-semibold text-2xl text-foreground">
+            <div className="space-y-4 lg:space-y-6">
+              <h3 className="font-display font-semibold text-xl sm:text-2xl text-foreground">
                 Passionate About Data & Digital Innovation
               </h3>
               
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <div className="space-y-3 lg:space-y-4 text-muted-foreground leading-relaxed text-sm sm:text-base">
                 <p>
                   I am a motivated professional with a strong foundation in data analysis, 
                   visualization, and reporting. Skilled in Python (Pandas, NumPy, Matplotlib, Seaborn), 
@@ -44,7 +44,7 @@ const About = () => {
             </div>
 
             {/* Education & Details */}
-            <div className="space-y-8">
+            <div className="space-y-6 lg:space-y-8 mt-8 lg:mt-0">
               {/* Education */}
               <div className="bg-card p-6 rounded-2xl border border-border shadow-sm">
                 <div className="flex items-start space-x-4">

@@ -67,28 +67,28 @@ const Skills = () => {
           </div>
 
           {/* Skills Grid */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8">
             {skillCategories.map((category, index) => {
               const Icon = category.icon;
               
               return (
-                <div key={index} className="bg-card p-8 rounded-2xl border border-border shadow-sm hover:shadow-md transition-shadow">
+                <div key={index} className="bg-card p-6 lg:p-8 rounded-2xl border border-border shadow-sm hover:shadow-md transition-shadow">
                   {/* Category Header */}
-                  <div className="flex items-center space-x-4 mb-6">
+                  <div className="flex items-center space-x-4 mb-4 lg:mb-6">
                     <div className="bg-primary/10 p-3 rounded-lg">
-                      <Icon className="w-6 h-6 text-primary" />
+                      <Icon className="w-5 h-5 lg:w-6 lg:h-6 text-primary" />
                     </div>
-                    <h3 className="font-display font-semibold text-xl text-foreground">
+                    <h3 className="font-display font-semibold text-lg lg:text-xl text-foreground">
                       {category.title}
                     </h3>
                   </div>
 
                   {/* Skills List */}
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-2 lg:gap-3">
                     {category.skills.map((skill, skillIndex) => (
                       <span 
                         key={skillIndex}
-                        className="px-4 py-2 rounded-full text-sm font-medium bg-secondary/50 text-foreground border border-border hover:bg-secondary transition-all hover:scale-105"
+                        className="px-3 py-1.5 lg:px-4 lg:py-2 rounded-full text-xs lg:text-sm font-medium bg-secondary/50 text-foreground border border-border hover:bg-secondary transition-all hover:scale-105"
                       >
                         {skill}
                       </span>

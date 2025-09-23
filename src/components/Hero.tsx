@@ -15,20 +15,20 @@ const Hero = () => {
       <div className="container mx-auto px-4 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
-          <div className="space-y-8 animate-fade-in">
+          <div className="space-y-6 md:space-y-8 animate-fade-in">
             <div className="inline-block px-4 py-2 bg-accent/10 text-accent font-medium rounded-full text-sm">
               Hello There!
             </div>
             
             <div className="space-y-4">
-              <h1 className="font-display font-bold text-4xl lg:text-6xl text-foreground leading-tight">
+              <h1 className="font-display font-bold text-3xl sm:text-4xl lg:text-6xl text-foreground leading-tight">
                 I'm <span className="text-primary">Ismail Dad Khan</span>,<br />
                 Data Science &<br />
                 Digital Marketing<br />
                 <span className="text-accent">Enthusiast</span>
               </h1>
               
-              <p className="text-xl text-muted-foreground max-w-lg">
+              <p className="text-lg sm:text-xl text-muted-foreground max-w-lg">
                 Turning Data and Creativity into Impactful Solutions. 
                 Specializing in Python, Power BI, Social Media Management, and E-commerce Support.
               </p>
@@ -56,7 +56,7 @@ const Hero = () => {
             </div>
 
             {/* Role Tags */}
-            <div className="flex flex-wrap gap-3 pt-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 pt-4">
               <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
                 Data Analyst
               </span>
@@ -70,13 +70,13 @@ const Hero = () => {
           </div>
 
           {/* Profile Image */}
-          <div className="relative flex justify-center lg:justify-end animate-slide-up">
+          <div className="relative flex justify-center lg:justify-end animate-slide-up mt-8 lg:mt-0">
             <div className="relative">
               {/* Background Shape */}
               <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl rotate-6 animate-float"></div>
               
               {/* Profile Image */}
-              <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden shadow-2xl">
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden shadow-2xl">
                 <img
                   src={profileImage}
                   alt="Ismail Dad Khan - Data Science & Digital Marketing Professional"
