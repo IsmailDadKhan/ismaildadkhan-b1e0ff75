@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Play } from "lucide-react";
-import profileImage from "@/assets/ismail-profile-new.jpg";
+import profileImage from "@/assets/ismail-profile-professional.png";
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -12,15 +12,15 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center bg-gradient-to-br from-background to-secondary/20">
-      <div className="container mx-auto px-4 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Text Content */}
-          <div className="space-y-6 md:space-y-8 animate-fade-in">
+          <div className="space-y-4 md:space-y-6 animate-fade-in">
             <div className="inline-block px-4 py-2 bg-accent/10 text-accent font-medium rounded-full text-sm">
               Hello There!
             </div>
             
-            <div className="space-y-4">
+            <div className="space-y-3">
               <h1 className="font-display font-bold text-3xl sm:text-4xl lg:text-6xl text-foreground leading-tight">
                 <span className="text-primary">Blending Data</span><br />
                 and <span className="text-accent">Marketing</span><br />
@@ -56,7 +56,7 @@ const Hero = () => {
             </div>
 
             {/* Role Tags */}
-            <div className="flex flex-wrap gap-2 sm:gap-3 pt-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 pt-2">
               <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
                 Computer Science Student
               </span>
@@ -70,7 +70,7 @@ const Hero = () => {
           </div>
 
           {/* Profile Image */}
-          <div className="relative flex justify-center lg:justify-end animate-slide-up mt-8 lg:mt-0">
+          <div className="relative flex justify-center lg:justify-end animate-slide-up mt-6 lg:mt-0">
             <div className="relative">
               {/* Background Shape */}
               <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl rotate-6 animate-float"></div>

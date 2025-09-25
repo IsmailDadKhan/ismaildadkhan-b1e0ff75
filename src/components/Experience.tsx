@@ -79,11 +79,11 @@ const Experience = () => {
   };
 
   return (
-    <section id="experience" className="py-20 bg-secondary/30">
+    <section id="experience" className="py-12 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="font-display font-bold text-3xl lg:text-4xl text-foreground mb-4">
               Experience
             </h2>
@@ -97,7 +97,7 @@ const Experience = () => {
             {/* Timeline Line */}
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-border"></div>
 
-            <div className="space-y-8">
+            <div className="space-y-6">
               {experiences.map((exp, index) => {
                 const colors = getColorClasses(exp.color);
                 
@@ -109,7 +109,7 @@ const Experience = () => {
                     </div>
 
                     {/* Experience Card */}
-                    <div className="flex-1 bg-card p-6 lg:p-8 rounded-2xl border border-border hover:shadow-md transition-shadow">
+                    <div className="flex-1 bg-card p-4 lg:p-6 rounded-2xl border border-border hover:shadow-md transition-shadow">
                       {/* Header */}
                       <div className="mb-4">
                         <h3 className="font-display font-semibold text-xl text-foreground mb-2">
@@ -153,7 +153,7 @@ const Experience = () => {
           </div>
 
           {/* Current Focus */}
-          <div className="mt-12 text-center bg-gradient-to-r from-primary/10 to-accent/10 p-6 rounded-2xl border border-border">
+          <div className="mt-8 text-center bg-gradient-to-r from-primary/10 to-accent/10 p-4 rounded-2xl border border-border">
             <h3 className="font-display font-semibold text-lg text-foreground mb-2">
               Current Focus
             </h3>

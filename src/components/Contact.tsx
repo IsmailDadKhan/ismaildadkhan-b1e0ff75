@@ -108,11 +108,11 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-secondary/30">
+    <section id="contact" className="py-12 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="font-display font-bold text-3xl lg:text-4xl text-foreground mb-4">
               Let's Connect
             </h2>
@@ -122,9 +122,9 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-8">
             {/* Contact Form */}
-            <div className="bg-card p-8 rounded-2xl border border-border shadow-sm">
+            <div className="bg-card p-6 rounded-2xl border border-border shadow-sm">
               <h3 className="font-display font-semibold text-xl text-foreground mb-6">
                 Send Me a Message
               </h3>
@@ -215,7 +215,7 @@ const Contact = () => {
             {/* Contact Information */}
             <div className="space-y-8">
               {/* Contact Details */}
-              <div className="bg-card p-8 rounded-2xl border border-border shadow-sm">
+              <div className="bg-card p-6 rounded-2xl border border-border shadow-sm">
                 <h3 className="font-display font-semibold text-xl text-foreground mb-6">
                   Get In Touch
                 </h3>
@@ -246,7 +246,7 @@ const Contact = () => {
               </div>
 
               {/* Social Links */}
-              <div className="bg-card p-8 rounded-2xl border border-border shadow-sm">
+              <div className="bg-card p-6 rounded-2xl border border-border shadow-sm">
                 <h3 className="font-display font-semibold text-xl text-foreground mb-6">
                   Connect With Me
                 </h3>

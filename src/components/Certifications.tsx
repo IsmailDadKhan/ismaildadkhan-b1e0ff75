@@ -67,11 +67,11 @@ const Certifications = () => {
   };
 
   return (
-    <section id="certifications" className="py-20 bg-background">
+    <section id="certifications" className="py-12 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="font-display font-bold text-3xl lg:text-4xl text-foreground mb-4">
               Certifications & Learning
             </h2>
@@ -81,14 +81,14 @@ const Certifications = () => {
           </div>
 
           {/* Certifications Grid */}
-          <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid sm:grid-cols-2 gap-4 lg:gap-6">
             {certifications.map((cert, index) => {
               const colors = getColorClasses(cert.color);
               
               return (
                 <div 
                   key={index} 
-                  className={`bg-card p-6 rounded-2xl border-2 ${colors.border} hover:shadow-lg transition-all duration-300 group`}
+                  className={`bg-card p-4 rounded-2xl border-2 ${colors.border} hover:shadow-lg transition-all duration-300 group`}
                 >
                   {/* Certification Header */}
                   <div className="flex items-start space-x-4 mb-4">
@@ -141,7 +141,7 @@ const Certifications = () => {
           </div>
 
           {/* Additional Learning */}
-          <div className="mt-12 text-center bg-gradient-to-r from-primary/10 to-accent/10 p-8 rounded-2xl border border-border">
+          <div className="mt-8 text-center bg-gradient-to-r from-primary/10 to-accent/10 p-6 rounded-2xl border border-border">
             <h3 className="font-display font-semibold text-xl text-foreground mb-4">
               Continuous Learning Journey
             </h3>

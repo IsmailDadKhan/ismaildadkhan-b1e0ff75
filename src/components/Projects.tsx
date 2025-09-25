@@ -61,11 +61,11 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 bg-background">
+    <section id="projects" className="py-12 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="font-display font-bold text-3xl lg:text-4xl text-foreground mb-4">
               Featured Projects
             </h2>
@@ -75,7 +75,7 @@ const Projects = () => {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
             {projects.map((project, index) => {
               const colors = getColorClasses(project.color);
               const Icon = project.icon;
@@ -83,10 +83,10 @@ const Projects = () => {
               return (
                 <div 
                   key={index}
-                  className={`bg-card p-6 lg:p-8 rounded-2xl border-2 ${colors.border} hover:shadow-lg transition-all duration-300 group`}
+                  className={`bg-card p-4 lg:p-6 rounded-2xl border-2 ${colors.border} hover:shadow-lg transition-all duration-300 group`}
                 >
                   {/* Project Header */}
-                  <div className="flex items-start space-x-4 mb-6">
+                  <div className="flex items-start space-x-4 mb-4">
                     <div className={`${colors.bg} p-3 rounded-lg group-hover:scale-105 transition-transform duration-300`}>
                       <Icon className={`w-6 h-6 ${colors.text}`} />
                     </div>
@@ -101,7 +101,7 @@ const Projects = () => {
                   </div>
 
                   {/* Features */}
-                  <div className="mb-6">
+                  <div className="mb-4">
                     <h4 className="font-medium text-foreground mb-3">Key Features:</h4>
                     <ul className="space-y-2">
                       {project.features.map((feature, featureIndex) => (
@@ -114,7 +114,7 @@ const Projects = () => {
                   </div>
 
                   {/* Technologies */}
-                  <div className="mb-6">
+                  <div className="mb-4">
                     <h4 className="font-medium text-foreground mb-3">Technologies Used:</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech, techIndex) => (
@@ -160,7 +160,7 @@ const Projects = () => {
           </div>
 
           {/* More Projects Note */}
-          <div className="text-center mt-12">
+          <div className="text-center mt-8">
             <div className="bg-gradient-to-r from-primary/10 to-accent/10 p-6 rounded-2xl border border-border">
               <h3 className="font-display font-semibold text-lg text-foreground mb-2">
                 More Projects Coming Soon
