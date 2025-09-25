@@ -22,26 +22,26 @@ const Hero = () => {
             
             <div className="space-y-4">
               <h1 className="font-display font-bold text-3xl sm:text-4xl lg:text-6xl text-foreground leading-tight">
-                I'm <span className="text-primary">Ismail Dad Khan</span>,<br />
-                Data Science &<br />
-                Digital Marketing<br />
-                <span className="text-accent">Enthusiast</span>
+                <span className="text-primary">Blending Data</span><br />
+                and <span className="text-accent">Marketing</span><br />
+                to Drive Growth
               </h1>
               
               <p className="text-lg sm:text-xl text-muted-foreground max-w-lg">
-                Turning Data and Creativity into Impactful Solutions. 
-                Specializing in Python, Power BI, Social Media Management, and E-commerce Support.
+                Computer Science Student (Data Science) | Aspiring Data Analyst | Social Media Marketing Consultant
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
-                onClick={() => scrollToSection('projects')}
                 size="lg"
                 className="rounded-full px-8 group"
+                asChild
               >
-                View My Work
-                <ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
+                <a href="#" className="inline-flex items-center justify-center">
+                  Download CV
+                  <ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
+                </a>
               </Button>
               
               <Button 
@@ -51,20 +51,20 @@ const Hero = () => {
                 className="rounded-full px-8 group"
               >
                 <Play className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
-                Hire Me
+                Let's Connect
               </Button>
             </div>
 
             {/* Role Tags */}
             <div className="flex flex-wrap gap-2 sm:gap-3 pt-4">
               <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                Data Analyst
+                Computer Science Student
               </span>
               <span className="px-4 py-2 bg-success/10 text-success rounded-full text-sm font-medium">
-                Social Media Consultant
+                Data Analyst
               </span>
               <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
-                E-commerce Support
+                Social Media Consultant
               </span>
             </div>
           </div>

@@ -114,11 +114,11 @@ const Contact = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="font-display font-bold text-3xl lg:text-4xl text-foreground mb-4">
-              Let's Work Together
+              Let's Connect
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Ready to transform your data into insights or grow your digital presence? 
-              Let's discuss your project and make it happen.
+              Interested in collaborating on data projects or marketing campaigns? 
+              I'd love to hear from you and discuss opportunities.
             </p>
           </div>
 
@@ -284,8 +284,8 @@ const Contact = () => {
                   <span className="text-success font-medium">Available for new projects</span>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  I'm currently accepting new freelance and full-time opportunities. 
-                  Let's discuss how I can help bring your vision to life.
+                  I'm actively seeking internship and entry-level opportunities in data analysis 
+                  and digital marketing. Let's connect and explore possibilities!
                 </p>
               </div>
             </div>

@@ -3,51 +3,38 @@ import { Code, TrendingUp, ShoppingCart, Users } from "lucide-react";
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Data Analysis & Tech",
+      title: "Technical Skills",
       icon: Code,
       skills: [
         "Python",
-        "Pandas & NumPy", 
-        "Matplotlib & Seaborn",
         "SQL", 
         "Power BI",
-        "Excel"
+        "Excel (Advanced)",
+        "ETL",
+        "Data Visualization"
       ]
     },
     {
-      title: "Marketing & Content",
+      title: "Marketing Skills",
       icon: TrendingUp,
       skills: [
         "Social Media Management",
-        "Campaign Optimization",
-        "SEO", 
+        "Content Creation",
+        "E-Commerce Management", 
         "Copywriting",
-        "SRS Documentation",
-        "Content Strategy"
-      ]
-    },
-    {
-      title: "E-commerce",
-      icon: ShoppingCart,
-      skills: [
-        "Product Listings",
-        "Inventory Management",
-        "Order Management",
-        "Marketplace Optimization",
-        "Sales Analysis", 
-        "Customer Support"
+        "Brand Growth"
       ]
     },
     {
       title: "Soft Skills",
       icon: Users,
       skills: [
-        "Analytical Thinking",
         "Communication",
-        "Creativity",
-        "Team Collaboration", 
+        "Collaboration",
+        "Analytical Thinking",
         "Problem Solving",
-        "Project Management"
+        "Project Management",
+        "Creativity"
       ]
     }
   ];
@@ -67,7 +54,7 @@ const Skills = () => {
           </div>
 
           {/* Skills Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {skillCategories.map((category, index) => {
               const Icon = category.icon;
               

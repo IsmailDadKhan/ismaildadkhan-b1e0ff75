@@ -19,26 +19,26 @@ const About = () => {
             {/* Bio */}
             <div className="space-y-4 lg:space-y-6">
               <h3 className="font-display font-semibold text-xl sm:text-2xl text-foreground">
-                Passionate About Data & Digital Innovation
+                From Marketing to Data Science
               </h3>
               
-              <div className="space-y-3 lg:space-y-4 text-muted-foreground leading-relaxed text-sm sm:text-base">
+              <div className="text-muted-foreground leading-relaxed text-sm sm:text-base space-y-3 lg:space-y-4">
                 <p>
-                  I am a motivated professional with a strong foundation in data analysis, 
-                  visualization, and reporting. Skilled in Python (Pandas, NumPy, Matplotlib, Seaborn), 
-                  Power BI, SQL, and Excel, I specialize in turning raw data into clear, actionable insights.
+                  I started my journey in social media marketing and e-commerce, where I learned to manage brand identity, 
+                  create engaging content, and drive growth across platforms. This experience taught me the importance of 
+                  understanding audience behavior and market trends.
                 </p>
                 
                 <p>
-                  My experience includes building ETL pipelines, designing star schemas and dashboards, 
-                  and delivering customer and sales insights that drive decision-making. Alongside 
-                  technical expertise, I bring strengths in documentation, copywriting, and social 
-                  media management, which allow me to bridge both data-driven and creative solutions.
+                  As I delved deeper into analyzing campaign performance and customer data, I developed a passion for 
+                  data science. I began learning Python, SQL, Excel, and Power BI to uncover insights and visualize trends 
+                  that drive meaningful business decisions.
                 </p>
                 
                 <p>
-                  Passionate about solving problems with data, I thrive on creating visual stories 
-                  from numbers that help businesses and teams grow smarter.
+                  Now, I'm combining both skills to help businesses make smarter, data-driven decisions while maintaining 
+                  strong brand presence and customer engagement. My goal is to bridge the gap between creative marketing 
+                  and analytical insights.
                 </p>
               </div>
             </div>

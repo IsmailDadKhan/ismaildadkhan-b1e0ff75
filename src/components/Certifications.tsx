@@ -4,46 +4,34 @@ import { Button } from "@/components/ui/button";
 const Certifications = () => {
   const certifications = [
     {
-      title: "Python for Data Science, AI & Development",
+      title: "IBM Python for Data Science, AI & Development",
       provider: "IBM",
-      platform: "Coursera",
       date: "2024",
-      description: "Comprehensive course covering Python programming fundamentals, data structures, and applications in data science and AI development.",
-      skills: ["Python Programming", "Data Analysis", "NumPy", "Pandas", "API Integration"],
-      verified: true,
+      skills: ["Python", "Data Analysis", "NumPy", "Pandas"],
       color: "primary",
       url: "https://www.credly.com/badges/ec3fc6cc-705a-4b4c-81ad-930ca421c3c1/public_url"
     },
     {
-      title: "Microsoft Excel VBA and Macros",
-      provider: "Coursera Instructor Network",
-      platform: "Coursera",
+      title: "IBM Data Science Orientation",
+      provider: "IBM",
       date: "2024",
-      description: "Advanced Excel programming course covering VBA scripting, macro development, and automation of complex spreadsheet tasks.",
-      skills: ["VBA Programming", "Excel Automation", "Macro Development", "Data Processing", "Workflow Optimization"],
-      verified: true,
+      skills: ["Data Science", "Analytics", "Research Methods"],
       color: "success",
-      url: "https://coursera.org/share/4d9fe1b8cada1a944a2399b262ff3b5f"
+      url: "#"
     },
     {
-      title: "Power BI for Beginners: Build Your First Report",
+      title: "Power BI for Beginners",
       provider: "Microsoft Learning",
-      platform: "Coursera",
       date: "2023",
-      description: "Hands-on training in Power BI fundamentals, data visualization, and creating interactive business intelligence reports.",
-      skills: ["Power BI", "Data Visualization", "DAX", "Business Intelligence", "Report Building"],
-      verified: true,
+      skills: ["Power BI", "Data Visualization", "Business Intelligence"],
       color: "accent",
       url: "https://coursera.org/share/916082d70f6a37e4800c6b24df33becc"
     },
     {
-      title: "Data Analysis with OpenAI API: Save Time with GenAI",
+      title: "Data Analysis with OpenAI API",
       provider: "AI Learning Institute",
-      platform: "Coursera",
       date: "2024",
-      description: "Advanced course on leveraging AI and GPT models for automated data analysis, insights generation, and workflow optimization.",
-      skills: ["OpenAI API", "GPT Integration", "Automated Analysis", "AI Workflows", "Data Processing"],
-      verified: true,
+      skills: ["OpenAI API", "Automated Analysis", "AI Workflows"],
       color: "primary",
       url: "https://coursera.org/share/18b24aa4dc7885d02073f5f12d9e3a94"
     }
@@ -92,88 +80,61 @@ const Certifications = () => {
             </p>
           </div>
 
-          {/* Certifications List */}
-          <div className="space-y-8">
+          {/* Certifications Grid */}
+          <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
             {certifications.map((cert, index) => {
               const colors = getColorClasses(cert.color);
               
               return (
                 <div 
                   key={index} 
-                  className={`bg-card p-6 lg:p-8 rounded-2xl border-2 ${colors.border} hover:shadow-lg transition-all duration-300 group`}
+                  className={`bg-card p-6 rounded-2xl border-2 ${colors.border} hover:shadow-lg transition-all duration-300 group`}
                 >
-                  <div className="flex flex-col lg:flex-row lg:items-start lg:space-x-6">
-                    {/* Certification Badge */}
-                    <div className="flex-shrink-0 mb-4 lg:mb-0">
-                      <div className={`${colors.bg} p-4 rounded-xl group-hover:scale-105 transition-transform duration-300`}>
-                        <Award className={`w-8 h-8 ${colors.text}`} />
-                      </div>
+                  {/* Certification Header */}
+                  <div className="flex items-start space-x-4 mb-4">
+                    <div className={`${colors.bg} p-3 rounded-lg group-hover:scale-105 transition-transform duration-300`}>
+                      <Award className={`w-6 h-6 ${colors.text}`} />
                     </div>
-
-                    {/* Certification Details */}
-                    <div className="flex-1 space-y-4">
-                      {/* Header */}
-                      <div className="space-y-2">
-                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                          <h3 className="font-display font-semibold text-lg text-foreground">
-                            {cert.title}
-                          </h3>
-                          {cert.verified && (
-                            <div className={`inline-flex items-center px-3 py-1 ${colors.bg} ${colors.text} text-xs font-medium rounded-full`}>
-                              <Award className="w-3 h-3 mr-1" />
-                              Verified
-                            </div>
-                          )}
-                        </div>
-                        
-                        <div className="flex flex-col sm:flex-row sm:items-center text-sm text-muted-foreground space-y-1 sm:space-y-0 sm:space-x-4">
-                          <span className="font-medium">{cert.provider}</span>
-                          <span className="hidden sm:block">•</span>
-                          <span>{cert.platform}</span>
-                          <span className="hidden sm:block">•</span>
-                          <div className="flex items-center">
-                            <Calendar className="w-4 h-4 mr-1" />
-                            {cert.date}
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Description */}
-                      <p className="text-muted-foreground leading-relaxed">
-                        {cert.description}
+                    <div className="flex-1">
+                      <h3 className="font-display font-semibold text-lg text-foreground leading-tight">
+                        {cert.title}
+                      </h3>
+                      <p className={`text-sm ${colors.text} font-medium mt-1`}>
+                        {cert.provider}
                       </p>
-
-                      {/* Skills Learned */}
-                      <div>
-                        <h4 className="text-sm font-medium text-foreground mb-2">Skills Acquired:</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {cert.skills.map((skill, skillIndex) => (
-                            <span 
-                              key={skillIndex}
-                              className="px-3 py-1 bg-muted text-muted-foreground text-xs rounded-full"
-                            >
-                              {skill}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* View Certificate Button */}
-                      <div className="pt-2">
-                        <Button 
-                          variant="ghost" 
-                          size="sm"
-                          className={`${colors.text} group/btn`}
-                          asChild
-                        >
-                          <a href={cert.url} target="_blank" rel="noopener noreferrer">
-                            View Certificate
-                            <ExternalLink className="ml-2 w-3 h-3 group-hover/btn:translate-x-0.5 transition-transform" />
-                          </a>
-                        </Button>
+                      <div className="flex items-center text-xs text-muted-foreground mt-1">
+                        <Calendar className="w-3 h-3 mr-1" />
+                        {cert.date}
                       </div>
                     </div>
                   </div>
+
+                  {/* Skills */}
+                  <div className="mb-4">
+                    <div className="flex flex-wrap gap-2">
+                      {cert.skills.map((skill, skillIndex) => (
+                        <span 
+                          key={skillIndex}
+                          className="px-2 py-1 bg-muted text-muted-foreground text-xs rounded-full"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* View Certificate Button */}
+                  <Button 
+                    variant="ghost" 
+                    size="sm"
+                    className={`${colors.text} group/btn w-full`}
+                    asChild
+                  >
+                    <a href={cert.url} target="_blank" rel="noopener noreferrer">
+                      View Certificate
+                      <ExternalLink className="ml-2 w-3 h-3 group-hover/btn:translate-x-0.5 transition-transform" />
+                    </a>
+                  </Button>
                 </div>
               );
             })}

@@ -2,8 +2,8 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
-import Services from "@/components/Services";
-import Portfolio from "@/components/Portfolio";
+import Projects from "@/components/Projects";
+import Experience from "@/components/Experience";
 import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
 
@@ -15,8 +15,8 @@ const Index = () => {
         <Hero />
         <About />
         <Skills />
-        <Services />
-        <Portfolio />
+        <Projects />
+        <Experience />
         <Certifications />
         <Contact />
       </main>
@@ -29,7 +29,7 @@ const Index = () => {
               Ismail Dad Khan
             </p>
             <p className="text-muted-foreground">
-              Data Science & Digital Marketing Enthusiast | Turning Data and Creativity into Impactful Solutions
+              Computer Science Student | Aspiring Data Analyst | Social Media Marketing Consultant
             </p>
             <div className="flex justify-center space-x-6 text-sm text-muted-foreground">
               <span>© 2024 Ismail Dad Khan</span>
