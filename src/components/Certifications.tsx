@@ -4,34 +4,34 @@ import { Button } from "@/components/ui/button";
 const Certifications = () => {
   const certifications = [
     {
-      title: "IBM Python for Data Science, AI & Development",
+      title: "Python for Data Science, AI & Development",
       provider: "IBM",
-      date: "2024",
+      date: "2025",
       skills: ["Python", "Data Analysis", "NumPy", "Pandas"],
       color: "primary",
       url: "https://www.credly.com/badges/ec3fc6cc-705a-4b4c-81ad-930ca421c3c1/public_url"
     },
     {
-      title: "IBM Data Science Orientation",
-      provider: "IBM",
-      date: "2024",
-      skills: ["Data Science", "Analytics", "Research Methods"],
+      title: "Microsoft Excel VBA and Macros",
+      provider: "Coursera",
+      date: "2025",
+      skills: ["Excel", "VBA", "Automation", "Macros"],
       color: "success",
-      url: "#"
+      url: "https://coursera.org/share/4d9fe1b8cada1a944a2399b262ff3b5f"
     },
     {
-      title: "Power BI for Beginners",
-      provider: "Microsoft Learning",
-      date: "2023",
+      title: "Power BI for Beginners: Build Your First Report",
+      provider: "Coursera",
+      date: "2025",
       skills: ["Power BI", "Data Visualization", "Business Intelligence"],
       color: "accent",
       url: "https://coursera.org/share/916082d70f6a37e4800c6b24df33becc"
     },
     {
-      title: "Data Analysis with OpenAI API",
-      provider: "AI Learning Institute",
-      date: "2024",
-      skills: ["OpenAI API", "Automated Analysis", "AI Workflows"],
+      title: "Data Analysis with OpenAI API: Save Time with GenAI",
+      provider: "Coursera",
+      date: "2025",
+      skills: ["OpenAI API", "Automated Analysis", "AI Workflows", "GenAI"],
       color: "primary",
       url: "https://coursera.org/share/18b24aa4dc7885d02073f5f12d9e3a94"
     }
