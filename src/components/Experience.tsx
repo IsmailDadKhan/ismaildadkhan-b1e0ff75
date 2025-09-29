@@ -4,46 +4,64 @@ const Experience = () => {
   const experiences = [
     {
       title: "Social Media Marketing Consultant",
-      company: "Freelance",
-      location: "Remote",
-      period: "2023 - Present",
-      description: "Managed brand identity, content creation, and growth strategies for multiple clients across various industries.",
+      company: "Artech Xperts",
+      location: "Pakistan",
+      period: "Oct 2022 - Sep 2023 · 1 yr",
+      type: "Full-time",
+      description: "Developed and maintained brand identity across multiple social media platforms.",
       responsibilities: [
-        "Developed and executed social media strategies",
-        "Created engaging content and visual assets",
-        "Managed posting schedules and community engagement",
-        "Analyzed performance metrics and optimized campaigns",
-        "Increased follower engagement by average of 45%"
+        "Developed and maintained brand identity across multiple social media platforms",
+        "Created engaging content strategies tailored to target audiences",
+        "Managed end-to-end content creation, scheduling, and posting",
+        "Monitored performance metrics to track growth and engagement",
+        "Implemented techniques to increase followers, reach, and brand visibility",
+        "Collaborated on ideas for campaigns and promotions to strengthen digital presence"
       ],
       color: "primary"
     },
     {
       title: "Social Media Marketing Intern",
-      company: "Digital Marketing Agency",
-      location: "Karachi, Pakistan",
-      period: "2022 - 2023",
-      description: "Assisted with social media campaigns, engagement tracking, and performance reporting for agency clients.",
+      company: "Artech Xperts",
+      location: "Pakistan",
+      period: "Oct 2021 - Dec 2022 · 1 yr 3 mos",
+      type: "Part-time",
+      description: "Assisted in content creation and scheduling for social media platforms.",
       responsibilities: [
-        "Supported campaign development and execution",
-        "Monitored social media engagement and interactions",
-        "Created performance reports and analytics dashboards",
-        "Collaborated with design team on visual content",
-        "Gained experience with multiple social media platforms"
+        "Assisted in content creation and scheduling for social media platforms",
+        "Supported the team in maintaining brand identity and consistency",
+        "Helped monitor engagement metrics and audience feedback",
+        "Researched social media trends and competitor strategies to suggest improvements",
+        "Contributed to brainstorming sessions for campaign ideas and promotions"
       ],
       color: "success"
     },
     {
-      title: "Freelancer (E-Commerce & Copywriting)",
-      company: "Various Clients",
-      location: "Remote",
-      period: "2022 - Present",
-      description: "Provided e-commerce support and technical documentation services for online businesses and software projects.",
+      title: "Freelancer – E-commerce Support",
+      company: "Indeed",
+      location: "Karachi, Sindh, Pakistan · Remote",
+      period: "Dec 2024 - Feb 2025 · 3 mos",
+      type: "Contract",
+      description: "Provided e-commerce support and product management services.",
       responsibilities: [
-        "Optimized product listings and descriptions",
+        "Managed product listings and inventory",
+        "Optimized product descriptions for better visibility",
+        "Handled order processing and customer inquiries",
+        "Improved product presentation and sales conversion"
+      ],
+      color: "accent"
+    },
+    {
+      title: "Freelancer – Content Writing & Documentation",
+      company: "Local Clients",
+      location: "Karachi, Sindh, Pakistan · Hybrid",
+      period: "Jan 2023 - May 2023 · 5 mos",
+      type: "Freelance",
+      description: "Provided content writing and technical documentation services.",
+      responsibilities: [
         "Created comprehensive SRS documentation",
-        "Developed engaging copy for marketing materials",
-        "Managed inventory and order processing systems",
-        "Improved product visibility and sales conversion"
+        "Developed engaging copy for various marketing materials",
+        "Optimized content for target audiences",
+        "Delivered high-quality documentation on schedule"
       ],
       color: "accent"
     }
@@ -116,8 +134,11 @@ const Experience = () => {
                           {exp.title}
                         </h3>
                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
-                          <p className={`font-medium ${colors.text}`}>{exp.company}</p>
-                          <div className="flex items-center text-sm text-muted-foreground space-x-4">
+                          <div>
+                            <p className={`font-medium ${colors.text}`}>{exp.company}</p>
+                            <p className="text-xs text-muted-foreground">{exp.type}</p>
+                          </div>
+                          <div className="flex flex-col sm:items-end text-sm text-muted-foreground gap-1">
                             <div className="flex items-center">
                               <Calendar className="w-4 h-4 mr-1" />
                               {exp.period}

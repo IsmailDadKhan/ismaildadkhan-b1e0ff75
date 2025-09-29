@@ -22,9 +22,9 @@ const Hero = () => {
             
             <div className="space-y-3">
               <h1 className="font-display font-bold text-3xl sm:text-4xl lg:text-6xl text-foreground leading-tight">
-                <span className="text-primary">Blending Data</span><br />
-                and <span className="text-accent">Marketing</span><br />
-                to Drive Growth
+                I'm <span className="text-primary">Ismail Dad Khan</span>,<br />
+                <span className="text-accent">Bridging Creativity and Data</span><br />
+                to Drive Smarter Decisions.
               </h1>
               
               <p className="text-lg sm:text-xl text-muted-foreground max-w-lg">
@@ -84,9 +84,12 @@ const Hero = () => {
                 />
               </div>
 
-              {/* Floating Badge */}
-              <div className="absolute -bottom-4 -left-4 bg-success text-success-foreground px-4 py-2 rounded-full font-semibold text-sm shadow-lg animate-float">
-                Data Scientist
+              {/* Floating Badges */}
+              <div className="absolute -bottom-4 -left-4 bg-primary text-primary-foreground px-4 py-2 rounded-full font-semibold text-sm shadow-lg animate-float">
+                Data Analyst
+              </div>
+              <div className="absolute -top-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-full font-semibold text-sm shadow-lg animate-float" style={{ animationDelay: '0.5s' }}>
+                Marketing Consultant
               </div>
             </div>
           </div>

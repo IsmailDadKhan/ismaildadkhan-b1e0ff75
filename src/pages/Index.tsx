@@ -32,7 +32,7 @@ const Index = () => {
               Computer Science Student | Aspiring Data Analyst | Social Media Marketing Consultant
             </p>
             <div className="flex justify-center space-x-6 text-sm text-muted-foreground">
-              <span>© 2024 Ismail Dad Khan</span>
+              <span>© 2025 Ismail Dad Khan</span>
               <span>•</span>
               <span>All rights reserved</span>
             </div>
