@@ -23,8 +23,8 @@ const Hero = () => {
             <div className="space-y-3">
               <h1 className="font-display font-bold text-3xl sm:text-4xl lg:text-6xl text-foreground leading-tight">
                 I'm <span className="text-primary">Ismail Dad Khan</span>,<br />
-                <span className="text-accent">Bridging Creativity and Data</span><br />
-                to Drive Smarter Decisions.
+                Data Science & Digital Marketing<br />
+                <span className="text-accent">Enthusiast</span>
               </h1>
               
               <p className="text-lg sm:text-xl text-muted-foreground max-w-lg">
