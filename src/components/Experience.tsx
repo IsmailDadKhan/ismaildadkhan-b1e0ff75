@@ -1,6 +1,10 @@
-import { Briefcase, Calendar, MapPin } from "lucide-react";
+import { Briefcase, Calendar, MapPin, ChevronDown } from "lucide-react";
+import { useState } from "react";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { Button } from "@/components/ui/button";
 
 const Experience = () => {
+  const [expandedJobs, setExpandedJobs] = useState<number[]>([]);
   const experiences = [
     {
       title: "Social Media Marketing Consultant",
@@ -67,31 +71,43 @@ const Experience = () => {
     }
   ];
 
+  const toggleJob = (index: number) => {
+    setExpandedJobs(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    );
+  };
+
   const getColorClasses = (color: string) => {
     switch (color) {
       case 'primary':
         return {
           bg: 'bg-primary/10',
           text: 'text-primary',
-          accent: 'bg-primary'
+          border: 'border-primary/20',
+          hover: 'hover:border-primary/40'
         };
       case 'success':
         return {
           bg: 'bg-success/10',
           text: 'text-success',
-          accent: 'bg-success'
+          border: 'border-success/20',
+          hover: 'hover:border-success/40'
         };
       case 'accent':
         return {
           bg: 'bg-accent/10',
           text: 'text-accent',
-          accent: 'bg-accent'
+          border: 'border-accent/20',
+          hover: 'hover:border-accent/40'
         };
       default:
         return {
           bg: 'bg-primary/10',
           text: 'text-primary',
-          accent: 'bg-primary'
+          border: 'border-primary/20',
+          hover: 'hover:border-primary/40'
         };
     }
   };
@@ -110,67 +126,102 @@ const Experience = () => {
             </p>
           </div>
 
-          {/* Experience Timeline */}
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-border"></div>
-
-            <div className="space-y-6">
-              {experiences.map((exp, index) => {
-                const colors = getColorClasses(exp.color);
-                
-                return (
-                  <div key={index} className="relative flex items-start space-x-6">
-                    {/* Timeline Dot */}
-                    <div className={`relative z-10 ${colors.bg} p-3 rounded-full`}>
-                      <Briefcase className={`w-5 h-5 ${colors.text}`} />
-                    </div>
-
-                    {/* Experience Card */}
-                    <div className="flex-1 bg-card p-4 lg:p-6 rounded-2xl border border-border hover:shadow-md transition-shadow">
-                      {/* Header */}
-                      <div className="mb-4">
-                        <h3 className="font-display font-semibold text-xl text-foreground mb-2">
-                          {exp.title}
-                        </h3>
-                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
-                          <div>
-                            <p className={`font-medium ${colors.text}`}>{exp.company}</p>
-                            <p className="text-xs text-muted-foreground">{exp.type}</p>
-                          </div>
-                          <div className="flex flex-col sm:items-end text-sm text-muted-foreground gap-1">
-                            <div className="flex items-center">
-                              <Calendar className="w-4 h-4 mr-1" />
-                              {exp.period}
-                            </div>
-                            <div className="flex items-center">
-                              <MapPin className="w-4 h-4 mr-1" />
-                              {exp.location}
-                            </div>
-                          </div>
+          {/* Experience Cards */}
+          <div className="space-y-4">
+            {experiences.map((exp, index) => {
+              const colors = getColorClasses(exp.color);
+              const isExpanded = expandedJobs.includes(index);
+              
+              return (
+                <Collapsible
+                  key={index}
+                  open={isExpanded}
+                  onOpenChange={() => toggleJob(index)}
+                >
+                  <div className={`bg-card rounded-xl border-2 ${colors.border} ${colors.hover} transition-all duration-200`}>
+                    {/* Card Header - Always Visible */}
+                    <div className="p-4 lg:p-6">
+                      <div className="flex items-start gap-4">
+                        {/* Icon */}
+                        <div className={`${colors.bg} p-3 rounded-lg flex-shrink-0`}>
+                          <Briefcase className={`w-5 h-5 ${colors.text}`} />
                         </div>
-                        <p className="text-muted-foreground leading-relaxed">
-                          {exp.description}
-                        </p>
+
+                        {/* Content */}
+                        <div className="flex-1 min-w-0">
+                          {/* Title & Company */}
+                          <div className="mb-3">
+                            <h3 className="font-display font-semibold text-lg lg:text-xl text-foreground mb-1">
+                              {exp.title}
+                            </h3>
+                            <p className={`font-medium ${colors.text} mb-1`}>
+                              {exp.company} • {exp.type}
+                            </p>
+                          </div>
+
+                          {/* Meta Info */}
+                          <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-muted-foreground mb-3">
+                            <div className="flex items-center gap-1">
+                              <Calendar className="w-4 h-4" />
+                              <span>{exp.period}</span>
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <MapPin className="w-4 h-4" />
+                              <span>{exp.location}</span>
+                            </div>
+                          </div>
+
+                          {/* Description */}
+                          <p className="text-muted-foreground text-sm leading-relaxed">
+                            {exp.description}
+                          </p>
+                        </div>
                       </div>
 
-                      {/* Responsibilities */}
-                      <div>
-                        <h4 className="font-medium text-foreground mb-3">Key Responsibilities & Achievements:</h4>
-                        <ul className="space-y-2">
-                          {exp.responsibilities.map((responsibility, respIndex) => (
-                            <li key={respIndex} className="flex items-start text-sm text-muted-foreground">
-                              <div className={`w-1.5 h-1.5 ${colors.accent} rounded-full mr-3 mt-2 flex-shrink-0`}></div>
-                              {responsibility}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                      {/* Collapsible Trigger Button */}
+                      <CollapsibleTrigger asChild>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="w-full mt-4 text-muted-foreground hover:text-foreground"
+                        >
+                          <span className="text-sm font-medium">
+                            {isExpanded ? "Show Less" : "Show More"}
+                          </span>
+                          <ChevronDown 
+                            className={`w-4 h-4 ml-2 transition-transform duration-200 ${
+                              isExpanded ? "rotate-180" : ""
+                            }`}
+                          />
+                        </Button>
+                      </CollapsibleTrigger>
                     </div>
+
+                    {/* Collapsible Content - Responsibilities */}
+                    <CollapsibleContent>
+                      <div className="px-4 lg:px-6 pb-4 lg:pb-6 border-t border-border/50">
+                        <div className="pt-4">
+                          <h4 className="font-medium text-foreground mb-3 text-sm">
+                            Key Responsibilities & Achievements
+                          </h4>
+                          <ul className="space-y-2.5">
+                            {exp.responsibilities.map((responsibility, respIndex) => (
+                              <li 
+                                key={respIndex} 
+                                className="flex items-start text-sm text-muted-foreground leading-relaxed"
+                              >
+                                <span className={`inline-block w-1.5 h-1.5 ${colors.text} rounded-full mr-3 mt-2 flex-shrink-0`}></span>
+                                <span>{responsibility}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    </CollapsibleContent>
                   </div>
-                );
-              })}
-            </div>
+                </Collapsible>
+              );
+            })}
           </div>
 
           {/* Current Focus */}
