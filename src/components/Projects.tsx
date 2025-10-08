@@ -1,5 +1,6 @@
 import { ExternalLink, Github, BarChart3, ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import salesAnalysisImage from "@/assets/sales-analysis-project.png";
 
 const Projects = () => {
   const projects = [
@@ -16,7 +17,8 @@ const Projects = () => {
       ],
       icon: BarChart3,
       color: "primary",
-      liveUrl: "#",
+      image: salesAnalysisImage,
+      liveUrl: "https://docs.google.com/presentation/d/1qs5GjJr8RJDf0IjBssrQyF7fRDMJxN_iuMTeIL1Vgwk/edit?usp=sharing",
       githubUrl: "#"
     },
     {
@@ -85,6 +87,17 @@ const Projects = () => {
                   key={index}
                   className={`bg-card p-4 lg:p-6 rounded-2xl border-2 ${colors.border} hover:shadow-lg transition-all duration-300 group`}
                 >
+                  {/* Project Image */}
+                  {project.image && (
+                    <div className="mb-4 rounded-lg overflow-hidden">
+                      <img 
+                        src={project.image} 
+                        alt={project.title}
+                        className="w-full h-48 object-cover"
+                      />
+                    </div>
+                  )}
+                  
                   {/* Project Header */}
                   <div className="flex items-start space-x-4 mb-4">
                     <div className={`${colors.bg} p-3 rounded-lg group-hover:scale-105 transition-transform duration-300`}>
