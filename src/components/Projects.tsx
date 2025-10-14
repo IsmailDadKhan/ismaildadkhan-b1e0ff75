@@ -1,9 +1,18 @@
 import { ExternalLink, Github, BarChart3, ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import salesAnalysisImage from "@/assets/sales-analysis-project.png";
 
 const Projects = () => {
-  const projects = [
+  const projects: Array<{
+    title: string;
+    description: string;
+    technologies: string[];
+    features: string[];
+    icon: any;
+    color: string;
+    image?: string;
+    liveUrl?: string;
+    githubUrl?: string;
+  }> = [
     {
       title: "Sales Analysis & Customer Insights Project",
       description: "Designed and implemented a comprehensive ETL pipeline with star schema architecture for sales data analysis. Created interactive dashboards and performed customer clustering to identify key insights and trends.",
@@ -17,9 +26,8 @@ const Projects = () => {
       ],
       icon: BarChart3,
       color: "primary",
-      image: salesAnalysisImage,
-      liveUrl: "https://docs.google.com/presentation/d/1qs5GjJr8RJDf0IjBssrQyF7fRDMJxN_iuMTeIL1Vgwk/edit?usp=sharing",
-      githubUrl: "#"
+      image: "https://i.postimg.cc/zBRqgpfp/Gemini-Generated-Image-2v9hvd2v9hvd2v9h.png",
+      liveUrl: "https://docs.google.com/presentation/d/1qs5GjJr8RJDf0IjBssrQyF7fRDMJxN_iuMTeIL1Vgwk/edit?usp=sharing"
     },
     {
       title: "Freelance E-Commerce & SMM Portfolio",
@@ -33,9 +41,7 @@ const Projects = () => {
         "Performance Analytics"
       ],
       icon: ShoppingBag,
-      color: "success",
-      liveUrl: "#",
-      githubUrl: "#"
+      color: "success"
     }
   ];
 
@@ -142,31 +148,37 @@ const Projects = () => {
                   </div>
 
                   {/* Project Links */}
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <Button 
-                      variant="default" 
-                      size="sm"
-                      className="rounded-full group/btn"
-                      asChild
-                    >
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                        View Project
-                        <ExternalLink className="ml-2 w-3 h-3 group-hover/btn:translate-x-0.5 transition-transform" />
-                      </a>
-                    </Button>
-                    
-                    <Button 
-                      variant="outline" 
-                      size="sm"
-                      className="rounded-full group/btn"
-                      asChild
-                    >
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                        Source Code
-                        <Github className="ml-2 w-3 h-3 group-hover/btn:scale-110 transition-transform" />
-                      </a>
-                    </Button>
-                  </div>
+                  {(project.liveUrl || project.githubUrl) && (
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      {project.liveUrl && (
+                        <Button 
+                          variant="default" 
+                          size="sm"
+                          className="rounded-full group/btn"
+                          asChild
+                        >
+                          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                            View Project
+                            <ExternalLink className="ml-2 w-3 h-3 group-hover/btn:translate-x-0.5 transition-transform" />
+                          </a>
+                        </Button>
+                      )}
+                      
+                      {project.githubUrl && (
+                        <Button 
+                          variant="outline" 
+                          size="sm"
+                          className="rounded-full group/btn"
+                          asChild
+                        >
+                          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                            Source Code
+                            <Github className="ml-2 w-3 h-3 group-hover/btn:scale-110 transition-transform" />
+                          </a>
+                        </Button>
+                      )}
+                    </div>
+                  )}
                 </div>
               );
             })}
