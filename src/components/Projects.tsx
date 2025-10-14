@@ -16,7 +16,7 @@ const Projects = () => {
     {
       title: "Sales Analysis & Customer Insights Project",
       description: "Designed and implemented a comprehensive ETL pipeline with star schema architecture for sales data analysis. Created interactive dashboards and performed customer clustering to identify key insights and trends.",
-      technologies: ["Python", "SQL", "Power BI", "Pandas", "Matplotlib"],
+      technologies: ["Excel", "Python", "Pandas", "NumPy", "Scikit-Learn", "Matplotlib", "Seaborn", "Power BI", "Jupyter Notebook"],
       features: [
         "ETL Pipeline Development",
         "Star Schema Design",
@@ -32,7 +32,7 @@ const Projects = () => {
     {
       title: "Freelance E-Commerce & SMM Portfolio",
       description: "Managed comprehensive social media marketing campaigns and e-commerce operations for multiple clients. Optimized product listings, created brand-focused content, and significantly improved engagement rates.",
-      technologies: ["Social Media Tools", "Content Creation", "E-commerce Platforms", "Analytics"],
+      technologies: ["Meta Business Suite", "Google Analytics", "WooCommerce", "Shopify", "Google Sheets", "Excel", "Social Media Strategy", "Content Planning", "Listings", "Product Optimization", "Storytelling", "Canva", "Adobe Photoshop"],
       features: [
         "Brand Identity Management",
         "Content Strategy & Creation",
@@ -41,7 +41,8 @@ const Projects = () => {
         "Performance Analytics"
       ],
       icon: ShoppingBag,
-      color: "success"
+      color: "success",
+      image: "https://i.postimg.cc/T3g7p4g0/Gemini-Generated-Image-4aryk24aryk24ary.png"
     }
   ];
 
