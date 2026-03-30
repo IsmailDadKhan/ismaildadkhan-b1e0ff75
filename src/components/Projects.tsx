@@ -19,7 +19,7 @@ const Projects = () => {
     {
       title: "FYP – Dakhla (AI-Assisted University Admissions Platform)",
       description: "Designing and developing an AI-powered academic platform to assist students with smart search, recommendations, and automated content generation using RAG and chatbot functionality.",
-      technologies: ["Python", "AI/ML", "RAG", "NLP", "Snowflake", "PostgreSQL", "Chatbot", "Data Extraction"],
+      technologies: ["Python", "AI/ML", "RAG", "NLP", "Flask", "React.js", "Tailwind CSS", "Snowflake", "PostgreSQL", "Chatbot", "Data Extraction"],
       features: [
         "AI-powered smart search & recommendations",
         "Data extraction & knowledge retrieval (RAG)",
@@ -47,7 +47,7 @@ const Projects = () => {
       icon: MessageSquareWarning,
       color: "accent",
       image: spamDetectorImage,
-      liveUrl: "https://drive.google.com/drive/folders/1BwN7MOBpRytilZ0dDHUhYMa49KxJfKw6?usp=sharing"
+      liveUrl: "https://drive.google.com/drive/folders/1BwN7MOBpRytilZ0dDHUhYMa49KxJfKw6"
     },
     {
       title: "Sales Analysis & Customer Insights Project",
