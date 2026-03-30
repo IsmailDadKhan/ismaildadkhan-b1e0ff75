@@ -47,7 +47,7 @@ const Projects = () => {
       icon: MessageSquareWarning,
       color: "accent",
       image: spamDetectorImage,
-      liveUrl: "https://drive.google.com/drive/folders/1BwN7MOBpRytilZ0dDHUhYMa49KxJfKw6?usp=sharing"
+      liveUrl: "https://drive.google.com/drive/folders/1BwN7MOBpRytilZ0dDHUhYMa49KxJfKw6"
     },
     {
       title: "Sales Analysis & Customer Insights Project",

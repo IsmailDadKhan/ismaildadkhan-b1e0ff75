@@ -33,18 +33,7 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg"
-                className="rounded-full px-8 group"
-                asChild
-              >
-                <a href="https://drive.google.com/uc?export=download&id=1_PLACEHOLDER_CV_ID" className="inline-flex items-center justify-center" download>
-                  Download CV
-                  <ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
-                </a>
-              </Button>
-              
-              <Button 
+              <Button
                 variant="outline"
                 size="lg"
                 onClick={() => scrollToSection('contact')}
