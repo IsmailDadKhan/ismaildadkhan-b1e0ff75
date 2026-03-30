@@ -38,7 +38,7 @@ const Hero = () => {
                 className="rounded-full px-8 group"
                 asChild
               >
-                <a href="#" className="inline-flex items-center justify-center">
+                <a href="https://drive.google.com/uc?export=download&id=1_PLACEHOLDER_CV_ID" className="inline-flex items-center justify-center" download>
                   Download CV
                   <ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
                 </a>

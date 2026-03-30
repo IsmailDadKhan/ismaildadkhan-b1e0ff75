@@ -1,5 +1,7 @@
-import { ExternalLink, Github, BarChart3, ShoppingBag } from "lucide-react";
+import { ExternalLink, Github, BarChart3, ShoppingBag, Brain, MessageSquareWarning } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import dakhlaImage from "@/assets/dakhla-project.png";
+import spamDetectorImage from "@/assets/spam-detector-project.png";
 
 const Projects = () => {
   const projects: Array<{
@@ -12,7 +14,41 @@ const Projects = () => {
     image?: string;
     liveUrl?: string;
     githubUrl?: string;
+    badge?: string;
   }> = [
+    {
+      title: "FYP – Dakhla (AI-Assisted University Admissions Platform)",
+      description: "Designing and developing an AI-powered academic platform to assist students with smart search, recommendations, and automated content generation using RAG and chatbot functionality.",
+      technologies: ["Python", "AI/ML", "RAG", "NLP", "Snowflake", "PostgreSQL", "Chatbot", "Data Extraction"],
+      features: [
+        "AI-powered smart search & recommendations",
+        "Data extraction & knowledge retrieval (RAG)",
+        "AI-based chatbot for student assistance",
+        "Personalized learning insights from structured & unstructured data",
+        "System design, workflows & database architecture"
+      ],
+      icon: Brain,
+      color: "primary",
+      image: dakhlaImage,
+      githubUrl: "https://github.com/dakhla-io",
+      badge: "Ongoing"
+    },
+    {
+      title: "Spam SMS Detector",
+      description: "Built a machine learning classification model to detect spam vs legitimate SMS messages using NLP techniques and optimized feature extraction.",
+      technologies: ["Python", "Scikit-Learn", "NLP", "TF-IDF", "Naive Bayes", "Logistic Regression", "Pandas", "Jupyter Notebook"],
+      features: [
+        "ML classification model for spam detection",
+        "NLP: text cleaning, tokenization & TF-IDF feature extraction",
+        "Model training & evaluation (Naive Bayes / Logistic Regression)",
+        "Preprocessing & feature optimization for improved accuracy",
+        "Real-world ML application demonstration"
+      ],
+      icon: MessageSquareWarning,
+      color: "accent",
+      image: spamDetectorImage,
+      liveUrl: "https://drive.google.com/drive/folders/1BwN7MOBpRytilZ0dDHUhYMa49KxJfKw6?usp=sharing"
+    },
     {
       title: "Sales Analysis & Customer Insights Project",
       description: "Designed and implemented a comprehensive ETL pipeline with star schema architecture for sales data analysis. Created interactive dashboards and performed customer clustering to identify key insights and trends.",
@@ -49,23 +85,13 @@ const Projects = () => {
   const getColorClasses = (color: string) => {
     switch (color) {
       case 'primary':
-        return {
-          bg: 'bg-primary/10',
-          text: 'text-primary',
-          border: 'border-primary/20'
-        };
+        return { bg: 'bg-primary/10', text: 'text-primary', border: 'border-primary/20' };
       case 'success':
-        return {
-          bg: 'bg-success/10',
-          text: 'text-success',
-          border: 'border-success/20'
-        };
+        return { bg: 'bg-success/10', text: 'text-success', border: 'border-success/20' };
+      case 'accent':
+        return { bg: 'bg-accent/10', text: 'text-accent', border: 'border-accent/20' };
       default:
-        return {
-          bg: 'bg-primary/10',
-          text: 'text-primary',
-          border: 'border-primary/20'
-        };
+        return { bg: 'bg-primary/10', text: 'text-primary', border: 'border-primary/20' };
     }
   };
 
@@ -79,7 +105,7 @@ const Projects = () => {
               Featured Projects
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              A showcase of my work in data analysis and digital marketing
+              A showcase of my work in data science, machine learning, and digital marketing
             </p>
           </div>
 
@@ -96,12 +122,18 @@ const Projects = () => {
                 >
                   {/* Project Image */}
                   {project.image && (
-                    <div className="mb-4 rounded-lg overflow-hidden">
+                    <div className="mb-4 rounded-lg overflow-hidden relative">
                       <img 
                         src={project.image} 
                         alt={project.title}
                         className="w-full h-48 object-cover"
+                        loading="lazy"
                       />
+                      {project.badge && (
+                        <span className="absolute top-2 right-2 px-3 py-1 bg-primary text-primary-foreground text-xs font-semibold rounded-full">
+                          {project.badge}
+                        </span>
+                      )}
                     </div>
                   )}
                   

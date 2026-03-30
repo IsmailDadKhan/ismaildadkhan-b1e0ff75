@@ -19,26 +19,26 @@ const About = () => {
             {/* Bio */}
             <div className="space-y-3 lg:space-y-4">
               <h3 className="font-display font-semibold text-xl sm:text-2xl text-foreground">
-                From Marketing to Data Science
+                Data Science & Digital Marketing
               </h3>
               
               <div className="text-muted-foreground leading-relaxed text-sm sm:text-base space-y-3 lg:space-y-4">
                 <p>
-                  I started my journey in social media marketing and e-commerce, where I learned to manage brand identity, 
-                  create engaging content, and drive growth across platforms. This experience taught me the importance of 
-                  understanding audience behavior and market trends.
+                  I'm an 8th semester Computer Science student specializing in Data Science at Hamdard University, Karachi. 
+                  I bring a strong foundation in Python, SQL, Power BI, and Machine Learning — along with hands-on experience 
+                  in data analytics and digital marketing, including Meta Ads and campaign performance analysis.
                 </p>
                 
                 <p>
-                  As I delved deeper into analyzing campaign performance and customer data, I developed a passion for 
-                  data science. I began learning Python, SQL, Excel, and Power BI to uncover insights and visualize trends 
-                  that drive meaningful business decisions.
+                  My journey started in social media marketing and e-commerce, where I developed a deep understanding of 
+                  audience behavior and market trends. That experience naturally evolved into a passion for data science — 
+                  turning raw data into actionable insights that drive smarter business decisions.
                 </p>
                 
                 <p>
-                  Now, I'm combining both skills to help businesses make smarter, data-driven decisions while maintaining 
-                  strong brand presence and customer engagement. My goal is to bridge the gap between creative marketing 
-                  and analytical insights.
+                  Today, I combine analytical expertise with marketing know-how to deliver data-driven strategies that 
+                  create measurable impact. I'm actively seeking opportunities in data analytics and data science where 
+                  I can contribute, grow, and solve real-world problems.
                 </p>
               </div>
             </div>
@@ -53,11 +53,11 @@ const About = () => {
                   </div>
                   <div className="flex-1">
                     <h4 className="font-semibold text-lg text-foreground">Education</h4>
-                    <p className="text-primary font-medium">BS Computer Science</p>
+                    <p className="text-primary font-medium">BS Computer Science (Data Science)</p>
                     <p className="text-muted-foreground">Hamdard University, Karachi</p>
                     <p className="text-sm text-muted-foreground flex items-center mt-2">
                       <Calendar className="w-4 h-4 mr-2" />
-                      2022 - Present
+                      2022 - Present (8th Semester)
                     </p>
                   </div>
                 </div>

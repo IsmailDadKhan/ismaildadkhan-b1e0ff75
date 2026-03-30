@@ -7,6 +7,21 @@ const Experience = () => {
   const [expandedJobs, setExpandedJobs] = useState<number[]>([]);
   const experiences = [
     {
+      title: "Social Media Marketer",
+      company: "ScopeTech LLC",
+      location: "Karachi (On-site)",
+      period: "Nov 2025 - Mar 2026",
+      type: "On-site",
+      description: "Managed social media accounts for US-based clients with a focus on Meta Ads and data-driven campaign optimization.",
+      responsibilities: [
+        "Managed social media accounts for US-based clients, including content planning and execution",
+        "Created and optimized Meta Ads (Facebook & Instagram campaigns) for lead generation and engagement",
+        "Analyzed campaign performance and improved targeting using data insights",
+        "Worked with multiple clients, ensuring timely delivery and performance optimization"
+      ],
+      color: "primary"
+    },
+    {
       title: "Social Media Marketing Consultant",
       company: "Artech Xperts",
       location: "Pakistan",
@@ -20,22 +35,6 @@ const Experience = () => {
         "Monitored performance metrics to track growth and engagement",
         "Implemented techniques to increase followers, reach, and brand visibility",
         "Collaborated on ideas for campaigns and promotions to strengthen digital presence"
-      ],
-      color: "primary"
-    },
-    {
-      title: "Social Media Marketing Intern",
-      company: "Artech Xperts",
-      location: "Pakistan",
-      period: "Oct 2021 - Dec 2022 · 1 yr 3 mos",
-      type: "Part-time",
-      description: "Assisted in content creation and scheduling for social media platforms.",
-      responsibilities: [
-        "Assisted in content creation and scheduling for social media platforms",
-        "Supported the team in maintaining brand identity and consistency",
-        "Helped monitor engagement metrics and audience feedback",
-        "Researched social media trends and competitor strategies to suggest improvements",
-        "Contributed to brainstorming sessions for campaign ideas and promotions"
       ],
       color: "success"
     },
