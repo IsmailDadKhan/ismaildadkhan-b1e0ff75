@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Play } from "lucide-react";
+import { Play } from "lucide-react";
 import profileImage from "@/assets/ismail-profile-professional.png";
 
 const Hero = () => {
