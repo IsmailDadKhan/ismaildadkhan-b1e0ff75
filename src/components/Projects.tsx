@@ -1,7 +1,7 @@
 import { ExternalLink, Github, BarChart3, ShoppingBag, Brain, Shield, Map } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import dakhlaImage from "@/assets/dakhla-project.png.asset.json";
-import bakhabaraiImage from "@/assets/bakhabarai-project.jpg.asset.json";
+import bakhabaraiImage from "@/assets/bakhabarai-project.png.asset.json";
 import musafirImage from "@/assets/musafir-project.png.asset.json";
 
 const Projects = () => {
@@ -37,7 +37,7 @@ const Projects = () => {
     },
     {
       title: "BakhabarAI - Agentic Crisis Intelligence & Response System",
-      description: "BakhabarAI is a multi-agent crisis detection and response system for Pakistani cities. It fuses signals from social media, weather APIs, traffic data, and citizen reports to detect urban emergencies in real time, then autonomously allocates resources and coordinates response actions.",
+      description: "Built for Phase 2 of AI Seekho 2026 – Google Antigravity National Hackathon, BakhabarAI is a multi-agent crisis detection and response system for Pakistani cities. It fuses signals from social media, weather APIs, traffic data, and citizen reports to detect urban emergencies in real time, then autonomously allocates resources and coordinates response actions.",
       technologies: ["Python", "Google ADK", "Flutter", "Firebase", "Google Maps API", "Weather API", "Geocoding API", "Places API", "Firestore", "FCM", "Multi-Agent AI"],
       features: [
         "5 AI agents orchestrated via Google Antigravity (ADK)",
