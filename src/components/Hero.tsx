@@ -28,7 +28,7 @@ const Hero = () => {
               </h1>
               
               <p className="text-lg sm:text-xl text-muted-foreground max-w-lg">
-                Computer Science Student (Data Science) | Aspiring Data Analyst | Social Media Marketing Consultant
+                Computer Science Graduate (Data Science) | Aspiring Data Analyst | Social Media Marketing Consultant
               </p>
             </div>
 
@@ -47,7 +47,7 @@ const Hero = () => {
             {/* Role Tags */}
             <div className="flex flex-wrap gap-2 sm:gap-3 pt-2">
               <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                Computer Science Student
+                Computer Science Graduate
               </span>
               <span className="px-4 py-2 bg-success/10 text-success rounded-full text-sm font-medium">
                 Data Analyst
