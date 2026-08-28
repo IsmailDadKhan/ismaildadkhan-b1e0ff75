@@ -206,7 +206,7 @@ const Projects = () => {
                           asChild
                         >
                           <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                            Source Code
+                            GitHub
                             <Github className="ml-2 w-3 h-3 group-hover/btn:scale-110 transition-transform" />
                           </a>
                         </Button>
