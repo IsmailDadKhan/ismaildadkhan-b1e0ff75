@@ -1,7 +1,8 @@
-import { ExternalLink, Github, BarChart3, ShoppingBag, Brain, MessageSquareWarning } from "lucide-react";
+import { ExternalLink, Github, BarChart3, ShoppingBag, Brain, Shield, Map } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import dakhlaImage from "@/assets/dakhla-project.png.asset.json";
-import spamDetectorImage from "@/assets/spam-detector-project.png";
+import bakhabaraiImage from "@/assets/bakhabarai-project.jpg.asset.json";
+import musafirImage from "@/assets/musafir-project.png.asset.json";
 
 const Projects = () => {
   const projects: Array<{
