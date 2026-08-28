@@ -1,7 +1,8 @@
-import { ExternalLink, Github, BarChart3, ShoppingBag, Brain, MessageSquareWarning } from "lucide-react";
+import { ExternalLink, Github, BarChart3, ShoppingBag, Brain, Shield, Map } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import dakhlaImage from "@/assets/dakhla-project.png.asset.json";
-import spamDetectorImage from "@/assets/spam-detector-project.png";
+import bakhabaraiImage from "@/assets/bakhabarai-project.jpg.asset.json";
+import musafirImage from "@/assets/musafir-project.png.asset.json";
 
 const Projects = () => {
   const projects: Array<{
@@ -35,20 +36,39 @@ const Projects = () => {
       badge: "Live"
     },
     {
-      title: "Spam SMS Detector",
-      description: "Built a machine learning classification model to detect spam vs legitimate SMS messages using NLP techniques and optimized feature extraction.",
-      technologies: ["Python", "Scikit-Learn", "NLP", "TF-IDF", "Naive Bayes", "Logistic Regression", "Pandas", "Jupyter Notebook"],
+      title: "BakhabarAI - Agentic Crisis Intelligence & Response System",
+      description: "BakhabarAI is a multi-agent crisis detection and response system for Pakistani cities. It fuses signals from social media, weather APIs, traffic data, and citizen reports to detect urban emergencies in real time, then autonomously allocates resources and coordinates response actions.",
+      technologies: ["Python", "Google ADK", "Flutter", "Firebase", "Google Maps API", "Weather API", "Geocoding API", "Places API", "Firestore", "FCM", "Multi-Agent AI"],
       features: [
-        "ML classification model for spam detection",
-        "NLP: text cleaning, tokenization & TF-IDF feature extraction",
-        "Model training & evaluation (Naive Bayes / Logistic Regression)",
-        "Preprocessing & feature optimization for improved accuracy",
-        "Real-world ML application demonstration"
+        "5 AI agents orchestrated via Google Antigravity (ADK)",
+        "Compound crisis reasoning for cascading events",
+        "Flutter mobile app with Expert View toggle",
+        "Real Google Maps, Weather, Geocoding, and Places APIs",
+        "Firebase Auth (phone OTP), Firestore, and FCM push notifications",
+        "False alarm detection and automatic alert retraction",
+        "12x faster response time vs rule-based system"
       ],
-      icon: MessageSquareWarning,
+      icon: Shield,
       color: "accent",
-      image: spamDetectorImage,
-      liveUrl: "https://drive.google.com/drive/folders/1BwN7MOBpRytilZ0dDHUhYMa49KxJfKw6"
+      image: bakhabaraiImage.url,
+      githubUrl: "https://github.com/naumanaarif/BakhabarAI"
+    },
+    {
+      title: "Musafir - Journey Planner for Karachi's Public Transit",
+      description: "Musafir is an AI-powered journey planning application designed specifically for Karachi's public transport ecosystem. It utilizes real-world local data of BRTs, Buses, and Chinchis to provide accurate, context-aware bus routes and transit advice.",
+      technologies: ["Python", "AI/ML", "NLP", "Google Maps API", "Voice Input", "Route Optimization", "Public Transit Data"],
+      features: [
+        "AI-powered journey planning for Karachi's public transport",
+        "Real-world local data of BRTs, Buses, and Chinchis",
+        "Text and voice input for destination queries",
+        "Context-aware bus routes and transit advice",
+        "Built for National AI Hackathon 2026 Karachi",
+        "Finished in Top 5 among 60+ teams across Karachi"
+      ],
+      icon: Map,
+      color: "primary",
+      image: musafirImage.url,
+      githubUrl: "https://github.com/naumanaarif/musafir"
     },
     {
       title: "Sales Analysis & Customer Insights Project",
