@@ -24,7 +24,7 @@ const About = () => {
               
               <div className="text-muted-foreground leading-relaxed text-sm sm:text-base space-y-3 lg:space-y-4">
                 <p>
-                  I'm an 8th semester Computer Science student specializing in Data Science at Hamdard University, Karachi. 
+                  I'm a Computer Science graduate specializing in Data Science from Hamdard University, Karachi. 
                   I bring a strong foundation in Python, SQL, Power BI, and Machine Learning — along with hands-on experience 
                   in data analytics and digital marketing, including Meta Ads and campaign performance analysis.
                 </p>
@@ -57,7 +57,7 @@ const About = () => {
                     <p className="text-muted-foreground">Hamdard University, Karachi</p>
                     <p className="text-sm text-muted-foreground flex items-center mt-2">
                       <Calendar className="w-4 h-4 mr-2" />
-                      2022 - Present (8th Semester)
+                      2022 - 2026
                     </p>
                   </div>
                 </div>

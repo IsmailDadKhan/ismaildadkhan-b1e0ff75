@@ -1,6 +1,6 @@
 import { ExternalLink, Github, BarChart3, ShoppingBag, Brain, MessageSquareWarning } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import dakhlaImage from "@/assets/dakhla-project.png";
+import dakhlaImage from "@/assets/dakhla-project.png.asset.json";
 import spamDetectorImage from "@/assets/spam-detector-project.png";
 
 const Projects = () => {
@@ -18,7 +18,7 @@ const Projects = () => {
   }> = [
     {
       title: "FYP – Dakhla (AI-Assisted University Admissions Platform)",
-      description: "Designing and developing an AI-powered academic platform to assist students with smart search, recommendations, and automated content generation using RAG and chatbot functionality.",
+      description: "An AI-powered academic platform that assists students with smart search, recommendations, and automated content generation using RAG and chatbot functionality — now live at dakhla.pk.",
       technologies: ["Python", "AI/ML", "RAG", "NLP", "Flask", "React.js", "Tailwind CSS", "Snowflake", "PostgreSQL", "Chatbot", "Data Extraction"],
       features: [
         "AI-powered smart search & recommendations",
@@ -29,9 +29,10 @@ const Projects = () => {
       ],
       icon: Brain,
       color: "primary",
-      image: dakhlaImage,
-      githubUrl: "https://github.com/dakhla-io",
-      badge: "Ongoing"
+      image: dakhlaImage.url,
+      liveUrl: "https://dakhla.pk",
+      githubUrl: "https://github.com/dakhla-pk",
+      badge: "Live"
     },
     {
       title: "Spam SMS Detector",
