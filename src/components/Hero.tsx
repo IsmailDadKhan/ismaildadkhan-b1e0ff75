@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
-import profileImage from "@/assets/ismail-profile-professional.png";
+import profileAsset from "@/assets/ismail-profile-2026.jpg.asset.json";
+
+const profileImage = profileAsset.url;
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
