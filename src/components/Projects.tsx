@@ -102,7 +102,7 @@ const Projects = () => {
       ],
       icon: ShoppingBag,
       color: "success",
-      image: "https://i.postimg.cc/T3g7p4g0/Gemini-Generated-Image-4aryk24aryk24ary.png"
+      image: freelanceSmmImage.url
     }
   ];
 
