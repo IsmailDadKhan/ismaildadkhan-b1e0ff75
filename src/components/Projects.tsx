@@ -4,6 +4,7 @@ import dakhlaImage from "@/assets/dakhla-project.png.asset.json";
 import bakhabaraiImage from "@/assets/bakhabarai-project.png.asset.json";
 import musafirImage from "@/assets/musafir-project.png.asset.json";
 import salesAnalysisImage from "@/assets/sales-analysis-project.png.asset.json";
+import freelanceSmmImage from "@/assets/freelance-ecommerce-smm.jpg.asset.json";
 
 const Projects = () => {
   const projects: Array<{
