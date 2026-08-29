@@ -4,6 +4,7 @@ import dakhlaImage from "@/assets/dakhla-project.png.asset.json";
 import bakhabaraiImage from "@/assets/bakhabarai-project.png.asset.json";
 import musafirImage from "@/assets/musafir-project.png.asset.json";
 import salesAnalysisImage from "@/assets/sales-analysis-project.png.asset.json";
+import freelanceSmmImage from "@/assets/freelance-ecommerce-smm.jpg.asset.json";
 
 const Projects = () => {
   const projects: Array<{
@@ -101,7 +102,7 @@ const Projects = () => {
       ],
       icon: ShoppingBag,
       color: "success",
-      image: "https://i.postimg.cc/T3g7p4g0/Gemini-Generated-Image-4aryk24aryk24ary.png"
+      image: freelanceSmmImage.url
     }
   ];
 
