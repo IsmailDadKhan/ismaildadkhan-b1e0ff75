@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import dakhlaImage from "@/assets/dakhla-project.png.asset.json";
 import bakhabaraiImage from "@/assets/bakhabarai-project.png.asset.json";
 import musafirImage from "@/assets/musafir-project.png.asset.json";
+import salesAnalysisImage from "@/assets/sales-analysis-project.png.asset.json";
 
 const Projects = () => {
   const projects: Array<{
@@ -83,8 +84,9 @@ const Projects = () => {
       ],
       icon: BarChart3,
       color: "primary",
-      image: "https://i.postimg.cc/zBRqgpfp/Gemini-Generated-Image-2v9hvd2v9hvd2v9h.png",
-      liveUrl: "https://docs.google.com/presentation/d/1qs5GjJr8RJDf0IjBssrQyF7fRDMJxN_iuMTeIL1Vgwk/edit?usp=sharing"
+      image: salesAnalysisImage.url,
+      liveUrl: "https://docs.google.com/presentation/d/1qs5GjJr8RJDf0IjBssrQyF7fRDMJxN_iuMTeIL1Vgwk/edit?usp=sharing",
+      githubUrl: "https://github.com/IsmailDadKhan/Sales-Analysis-Customer-Insights"
     },
     {
       title: "Freelance E-Commerce & SMM Portfolio",
