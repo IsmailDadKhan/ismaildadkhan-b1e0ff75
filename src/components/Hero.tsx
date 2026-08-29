@@ -67,7 +67,7 @@ const Hero = () => {
               <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl rotate-6 animate-float"></div>
               
               {/* Profile Image */}
-              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden shadow-2xl">
+              <div className="relative w-64 sm:w-80 lg:w-96 aspect-[1107/1421] rounded-3xl overflow-hidden shadow-2xl">
                 <img
                   src={profileImage}
                   alt="Ismail Dad Khan - Data Science & Digital Marketing Professional"
